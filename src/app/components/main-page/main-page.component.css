@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+.picture-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .quote{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size:xx-large;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+  }
+
+  .author{
+
+    position: absolute;
+    top: 80%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+      color: white;
+      font-size:large;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+  }
+
+  .text-container{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 60px;
+    margin-bottom: 120px;
+  text-align: center;
+  font-size: larger;
+  }
+
+  .navbar-brand{
+    font-family: 'Courier New', monospace;
+    font-size:xx-large;
+    
+  }
+
+
+
+

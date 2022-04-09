@@ -1,0 +1,129 @@
+<body class="d-flex flex-column">
+    <div id="page-content">
+    <!-- Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand">BookStore</a>
+           <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" routerLink="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/shop">Shop</a></li>
+                </ul>
+                <ul>
+                    <a class="btn btn-outline-dark" routerLink="/login" role="button">Login</a>
+                </ul>
+            
+            </div>
+        </div>
+    </nav>
+    <!-- Quote containern with picture-->
+    <div class="picture-container">
+        <header >
+            <img src="../../assets/images/mainBook.jpg" class="img-responsive" width=100% >
+            <blockquote>
+
+                    <p class="quote" >“You are not done with a book until you pass it to another reader.”</p>
+                    <footer class="author"> - Donalyn Miller</footer>
+            </blockquote>    
+        </header>
+    </div>
+
+    <!-- Search area-->
+    <section>
+        <div class="search-container">
+            <div >    
+                    <div class="input-group">
+                        <input type="hidden" name="search_param" value="all" id="search_param">         
+                        <input type="text" class="form-control" name="x" placeholder="Search By Book Name...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-outline-dark" type="button">Search</button>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Button to scroll Up-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Up</button>
+
+    <!-- All Products-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5">
+                <a class="card text-decoration-none" style="color: #040405;"  type="button" >
+                 <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Harry Potter - Order of the Phoenix</h5>
+                            <!-- Product author-->
+                            <p >J. K. Rowling</p>
+                            <!-- Product price-->
+                            10.00€
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-5">
+                <a class="card text-decoration-none" style="color: #040405;"  type="button">
+                 <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Harry Potter - Order of the Phoenix</h5>
+                            <!-- Product author-->
+                            <p >J. K. Rowling</p>
+                            <!-- Product price-->
+                            10.00€
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-5">
+                <a class="card text-decoration-none" style="color: #040405;"  type="button">
+                 <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Harry Potter - Order of the Phoenix</h5>
+                            <!-- Product author-->
+                            <p >J. K. Rowling</p>
+                            <!-- Product price-->
+                            10.00€
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            </div>               
+        </div>
+    </section>
+</div>
+    <!-- Footer details-->
+    <footer id="footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; BookStore 2022</p></div>
+    </footer>
+    
+    <!-- Script for button to scroll up-->
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+</body>
