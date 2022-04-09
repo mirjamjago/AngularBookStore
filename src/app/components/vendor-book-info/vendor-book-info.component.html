@@ -5,22 +5,13 @@
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand">BookStore</a>
            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" href="vendorMain.html">Home</a></li>
-                    <div class="dropdown">
-                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
-                          Your Shop
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="vendorBookshelf.html">Your Bookshelf</a></li>
-                          <li><a class="dropdown-item" href="addNewBook.html">Add New Book</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Orders</a></li>
-                        </ul>
-                      </div>
-                </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" href="/shop/vendor/:userName">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/bookshelf/:userName">Your Bookshelf</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/addNew/:userName">Add New</a></li>
+            </ul>
                 <ul>
-                    <a class="btn btn-outline-dark" href="shopMain.html" role="button">Log out</a>
+                    <a class="btn btn-outline-dark" href="/shop" role="button">Log out</a>
                 </ul>
             
             </div>
@@ -47,7 +38,7 @@
                             <p>The book is in good condition</p>
                             <!-- Product price-->
                             <p class="fw-bolder">10.00€</p>
-                            
+
                             <!--TODO-->
                             <!--Needs to implement changing and remove-->
                             <a class="btn btn-outline-dark btn-lg" type="button" href="#!">Change</a>
