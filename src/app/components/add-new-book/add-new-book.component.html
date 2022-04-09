@@ -33,17 +33,17 @@
                         <form>
 
                             <div class="form-floating mb-4">
-                              <input class="form-control form-control-lg" id="floatingInput" placeholder="Book Name">
+                              <input class="form-control form-control-lg" id="floatingInput" [(ngModel)]="bookname" placeholder="Book Name">
                               <label for="floatingInput" >Book Name</label>
                             </div>
 
                             <div class="form-floating mb-4">
-                                <input class="form-control form-control-lg" id="floatingInput" placeholder="Author">
+                                <input class="form-control form-control-lg" id="floatingInput" [(ngModel)]="author" placeholder="Author">
                                 <label for="floatingInput" >Author</label>
                               </div>
 
                             <div class="form-floating mb-5">
-                              <select class="form-control form-control-lg" id="floatingSelect">
+                              <select class="form-control form-control-lg" id="floatingSelect" [(ngModel)]="genre">
                                 <option>Select</option>
                                 <option>Action and Adventure</option>
                                 <option>Classics</option>
@@ -70,12 +70,12 @@
                             </div>
 
                             <div class="form-floating mb-4">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <textarea class="form-control" [(ngModel)]="comment" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                                 <label for="floatingTextarea2">Comments</label>
                               </div>
 
                             <div class="form-floating mb-4">
-                                <input class="form-control form-control-lg" id="floatingInput" placeholder="Price" type="number" min="1" step="any">
+                                <input class="form-control form-control-lg" [(ngModel)]="price" id="floatingInput" placeholder="Price" type="number" min="1" step="any">
                                 <label for="floatingInput" >Price</label>
                               </div>
                             

@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-new-book.component.css']
 })
 export class AddNewBookComponent implements OnInit {
+  bookname!: string;
+  author!: string;
+  genre!: string;
+  comment!: string;
+  price!: number;
 
   constructor() { }
 
