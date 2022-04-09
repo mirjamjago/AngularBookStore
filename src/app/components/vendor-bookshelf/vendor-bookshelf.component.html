@@ -6,21 +6,12 @@
             <a class="navbar-brand">BookStore</a>
            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" href="vendorMain.html">Home</a></li>
-                    <div class="dropdown">
-                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
-                          Your Shop
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="vendorBookshelf.html">Your Bookshelf</a></li>
-                          <li><a class="dropdown-item" href="addNewBook.html">Add New Book</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Orders</a></li>
-                        </ul>
-                      </div>
+                    <li class="nav-item"><a class="nav-link active" href="/shop/:userName">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/bookshelf/:userName">Your Bookshelf</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/addNew/:userName">Add New</a></li>
                 </ul>
                 <ul>
-                    <a class="btn btn-outline-dark" href="shopMain.html" role="button">Log out</a>
+                    <a class="btn btn-outline-dark" href="/shop" role="button">Log out</a>
                 </ul>
             
             </div>
@@ -49,51 +40,20 @@
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
-                    <a class="card text-decoration-none" style="color: #040405;"  type="button" href="vendorBookInfo.html">
+                    <a class="card text-decoration-none" style="color: #040405;"  type="button"  *ngFor="let book of booklist" >
                      <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Harry Potter - Order of the Phoenix</h5>
+                                <h5 class="fw-bolder">{{book.bookname}}</h5>
                                 <!-- Product author-->
-                                <p >J. K. Rowling</p>
+                                <p >{{book.author}}</p>
                                 <!-- Product price-->
-                                10.00€
+                                <p>{{book.price}}</p>
                             </div>
                         </div>
                     </a>
                 </div>
-            <div class="col mb-5">
-                <a class="card text-decoration-none" style="color: #040405;"  type="button" href="vendorBookInfo.html">
-                 <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Harry Potter - Order of the Phoenix</h5>
-                            <!-- Product author-->
-                            <p >J. K. Rowling</p>
-                            <!-- Product price-->
-                            10.00€
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col mb-5">
-                <a class="card text-decoration-none" style="color: #040405;"  type="button" href="vendorBookInfo.html">
-                 <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">Harry Potter - Order of the Phoenix</h5>
-                            <!-- Product author-->
-                            <p >J. K. Rowling</p>
-                            <!-- Product price-->
-                            10.00€
-                        </div>
-                    </div>
-                </a>
-            </div>
-    
             </div>               
         </div>
     </section>

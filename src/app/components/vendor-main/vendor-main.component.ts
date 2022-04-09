@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/models/book';
 
 @Component({
   selector: 'app-vendor-main',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendorMainComponent implements OnInit {
 
+  booklist: Book[] | undefined;
+  
   constructor() { }
 
   ngOnInit(): void {

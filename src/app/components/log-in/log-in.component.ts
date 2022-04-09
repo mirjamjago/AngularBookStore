@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+
+
 
 
 @Component({
@@ -7,8 +10,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-username!: string;
-password!: string;
+  username!: string;
+  password!: string;
+
 
 
   constructor() { }
@@ -16,6 +20,10 @@ password!: string;
   ngOnInit(): void {
   }
 
-
+  /*
+  onSubmit() {
+    this.userService.logIn(this.username, this.password);
+  }
+  */
 
 }
