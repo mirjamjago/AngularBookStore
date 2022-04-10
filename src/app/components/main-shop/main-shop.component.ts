@@ -8,12 +8,7 @@ import { Book } from 'src/app/models/book';
 })
 export class MainShopComponent implements OnInit {
   
-  booklist: any[] = [
-new Book(1, "Harry Potter", "J.K. Rowling", "Fantasy", "Book is in good contition", 10),
-new Book(1, "Harry Potter", "J.K. Rowling", "Fantasy", "Book is in good contition", 10),
-new Book(1, "Harry Potter", "J.K. Rowling", "Fantasy", "Book is in good contition", 10),
-new Book(1, "Harry Potter", "J.K. Rowling", "Fantasy", "Book is in good contition", 10)
-  ];
+  booklist: Book[] = [];
 
   constructor() { }
 
