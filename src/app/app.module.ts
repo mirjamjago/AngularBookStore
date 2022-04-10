@@ -15,6 +15,7 @@ import { AddNewBookComponent } from './components/add-new-book/add-new-book.comp
 import { FormsModule } from '@angular/forms';
 import { CustomerMainComponent } from './components/customer-main/customer-main.component';
 import { OrderComponent } from './components/order/order.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OrderComponent } from './components/order/order.component';
     CustomerBookInfoComponent,
     AddNewBookComponent,
     CustomerMainComponent,
-    OrderComponent
+    OrderComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,

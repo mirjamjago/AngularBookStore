@@ -1,0 +1,11 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+
+   }
+   .show-scrollTop {
+    opacity: 1;
+
+   }
