@@ -48,9 +48,9 @@
     <!-- All Products-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="justify-content-center" *ngFor="let book of booklist">
             <div class="col mb-5">
-                <a class="card text-decoration-none" style="color: #040405;"  type="button" *ngFor="let book of booklist">
+                <a class="card text-decoration-none" style="color: #040405;"  type="button" >
                  <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -59,12 +59,11 @@
                             <!-- Product author-->
                             <p >{{book.author}}</p>
                             <!-- Product price-->
-                            <p>{{book.price}}</p>
+                            <p>{{book.price}} €</p>
                         </div>
                     </div>
                 </a>
             </div>
-    
             </div>               
         </div>
     </section>
@@ -96,4 +95,5 @@
           document.documentElement.scrollTop = 0;
         }
         </script>
+
 </body>
