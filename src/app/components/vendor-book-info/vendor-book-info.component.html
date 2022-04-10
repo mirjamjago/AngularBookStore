@@ -18,32 +18,68 @@
         </div>
     </nav>
 
-    <!--TODO-->
-    <!--when opening the book then shows spesific book info, how to make it ?-->
+  
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5justify-content-left">
+            <div class="row gx-4 gx-lg-5 justify-content-left" *ngFor="let book of booklist">
             <div class="col mb-5">
                 <div class="card"  type="button">
                  <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h3 class="fw-bolder">Harry Potter - Order of the Phoenix</h3>
-                            <!-- Product author-->
-                            <h5 >J. K. Rowling</h5>
-                            <!--Product genre-->
-                            <p>Fantasy</p>
-                             <!--Product comment-->
-                            <p>The book is in good condition</p>
-                            <!-- Product price-->
-                            <p class="fw-bolder">10.00€</p>
-
-                            <!--TODO-->
-                            <!--Needs to implement changing and remove-->
-                            <a class="btn btn-outline-dark btn-lg" type="button" href="#!">Change</a>
-                            <a class="btn btn-outline-danger btn-lg" type="button" href="#!">Remove</a>
+                    <div class="card-body p-4 mb-5">
+                        <div class="text-right">
+                            <a class="btn btn-outline-dark btn-lg mx-1" type="button" (click)="currentEdit = book">Change</a>
+                            <a class="btn btn-outline-danger btn-lg mx-1" type="button" href="#!">Remove</a>
                         </div>
+                        <span>
+                            <!-- Product name-->
+                            <div class="col" *ngIf="currentEdit && currentEdit.id === book.id; then editTitle else showTitle"> </div>
+                        <div class="text-center mb-5">
+                            <ng-template #editTitle> 
+                                <input class="form-control form-control-lg text-center mt-5" [(ngModel)]="book.bookname">
+                            </ng-template>
+                            <ng-template #showTitle>
+                                <h3 class="fw-bolder text-center mt-5">{{book.bookname}}</h3>
+                            </ng-template>
+                            <!-- Product author-->
+                            <div class="col" *ngIf="currentEdit && currentEdit.id === book.id; then editAuthor else showAuthor"> </div>
+                                <ng-template #editAuthor> 
+                                    <input class="form-control form-control-lg text-center mt-2" [(ngModel)]="book.author">
+                                </ng-template>
+                                <ng-template #showAuthor>
+                                    <h5 class="text-center">{{book.author}}</h5>
+                                </ng-template>
+                            <!--Product genre-->
+                            <div class="col" *ngIf="currentEdit && currentEdit.id === book.id; then editGenre else showGenre"> </div>
+                                <ng-template #editGenre> 
+                                    <input class="form-control form-control-lg text-center mt-2" [(ngModel)]="book.genre">
+                                </ng-template>
+                                <ng-template #showGenre>
+                                    <p class="text-center">{{book.genre}}</p>
+                                </ng-template>
+                             <!--Product comment-->
+                             <div class="col" *ngIf="currentEdit && currentEdit.id === book.id; then editComment else showComment"> </div>
+                             <ng-template #editComment> 
+                                 <input class="form-control form-control-lg text-center mt-2" [(ngModel)]="book.comment">
+                             </ng-template>
+                             <ng-template #showComment>
+                                 <p class="text-center">{{book.comment}}</p>
+                             </ng-template>
+                            <!-- Product price-->
+                            <div class="col" *ngIf="currentEdit && currentEdit.id === book.id; then editPrice else showPrice"> </div>
+                             <ng-template #editPrice> 
+                                 <input class="form-control form-control-lg text-center mt-2" [(ngModel)]="book.price" type="number" min="1" step="any">
+                                 <div class="mt-4">
+                                     <!--Need to implement the function behind it-->
+                                    <button class="btn btn-outline-dark btn-lg" type="button" >UPDATE</button>
+                                 </div>
+                                 
+                                </ng-template>
+                             <ng-template #showPrice>
+                                 <p class="text-center">{{book.price}}€</p>
+                             </ng-template>
+                            
+                        </div>
+                    </span>
                     </div>
                 </div>
             </div>
