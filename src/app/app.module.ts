@@ -14,6 +14,7 @@ import { CustomerBookInfoComponent } from './components/customer-book-info/custo
 import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
 import { FormsModule } from '@angular/forms';
 import { CustomerMainComponent } from './components/customer-main/customer-main.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CustomerMainComponent } from './components/customer-main/customer-main.
     VendorBookInfoComponent,
     CustomerBookInfoComponent,
     AddNewBookComponent,
-    CustomerMainComponent
+    CustomerMainComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

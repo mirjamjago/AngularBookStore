@@ -1,0 +1,57 @@
+<body class="d-flex flex-column">
+    <div id="page-content">
+    <!-- Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand">BookStore</a>
+           <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" routerLink="shop/customer/:userName">Home</a></li>
+                </ul>
+                <ul>
+                    <a class="btn btn-outline-dark" routerLink="order/customer/:userName/:orderId" role="button">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                    <a class="btn btn-outline-dark" routerLink="/shop" role="button">Log out</a>
+                </ul>
+            
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="py-5">
+    <div class=" container px-4 px-lg-5 mt-5">
+    <table class="table table-borderless"  *ngFor="let order of orderList">
+        <tbody *ngFor="let book of book">
+          <tr>
+            <td>
+              <div class="d-flex mb-2">
+                <div class="flex-lg-grow-1 ms-3">
+                  <h6 class="small mb-0"><a class="text-reset">{{book.bookname}}</a></h6>
+                  <span class="small">{{book.author}}</span>
+                </div>
+              </div>
+            </td>
+            <td class="text-end">{{book.price}}</td>
+          </tr>
+        </tbody>
+        <tfoot> 
+          <tr class="fw-bold">
+            <td colspan="2">TOTAL</td>
+            <td class="text-end">{{order.amount}}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+</section>
+
+    
+    </div>
+    <!-- Footer details-->
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; BookStore 2022</p></div>
+    </footer>
+    
+
+</body>
